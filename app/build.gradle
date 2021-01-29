@@ -1,0 +1,58 @@
+/*
+ * Copyright (c) 2017. http://hiteshsahu.com- All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * If you use or distribute this project then you MUST ADD A COPY OF LICENCE
+ * along with the project.
+ *  Written by Hitesh Sahu <hiteshkrsahu@Gmail.com>, 2017.
+ */
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        applicationId "com.hitesh_sahu.retailshop"
+        minSdkVersion 21
+        targetSdkVersion 30
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.fragment:fragment:1.2.4'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.android.support:design:25.3.1'
+
+    implementation 'com.google.code.gson:gson:2.4'
+    implementation 'ch.acra:acra:4.8.5'
+    implementation 'androidx.palette:palette:1.0.0'
+    implementation 'androidx.drawerlayout:drawerlayout:1.0.0'
+    compile files('libs/com.google.guava_1.6.0.jar')
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.flaviofaria:kenburnsview:1.0.7'
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    //Loading animations
+    compile 'com.wang.avi:library:1.0.5'
+    compile 'com.nineoldandroids:library:2.4.0'
+
+    //retrofit - network
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+}
